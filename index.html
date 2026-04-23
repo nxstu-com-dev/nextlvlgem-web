@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nextlevel Gems — Transparency is the key</title>
+<meta name="description" content="Curated collection of rare, traceable gemstones. Every gem comes with verified details about its origin, quality, and value." />
+<link rel="canonical" href="https://nextlvlgem.com/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Open Graph / Facebook / Instagram / LinkedIn -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nextlvlgem.com/" />
+<meta property="og:title" content="Nextlevel Gems — Transparency is the key" />
+<meta property="og:description" content="Curated collection of rare, traceable gemstones. Every gem comes with verified details about its origin, quality, and value." />
+<meta property="og:image" content="https://nextlvlgem.com/og-image.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Nextlevel Gems" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nextlevel Gems — Transparency is the key" />
+<meta name="twitter:description" content="Curated collection of rare, traceable gemstones." />
+<meta name="twitter:image" content="https://nextlvlgem.com/og-image.jpg" />
+
+<!-- Theme color (mobilní prohlížeče) -->
+<meta name="theme-color" content="#132218" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --paper:#f6f3ec;
+    --cream:#ebe5d8;
+    --bone:#ded4c0;
+    --forest:#132218;
+    --emerald:#1f4630;
+    --gold:#a88a56;
+    --muted:#7a736a;
+    --line:rgba(10,10,10,.12);
+    --line-light:rgba(10,10,10,.06);
+    --white:#ffffff;
+
+    --f-serif:'Cormorant Garamond', 'Didot', 'Bodoni MT', serif;
+    --f-sans:'Inter', -apple-system, sans-serif;
+
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--f-sans);
+    font-weight:300;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+
+  /* ———— Typografie ———— */
+  .serif{font-family:var(--f-serif);font-weight:400;letter-spacing:.01em;}
+  .serif-italic{font-family:var(--f-serif);font-style:italic;font-weight:300;}
+  .micro{
+    font-size:10px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  .small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;}
+  .eyebrow{
+    font-size:10px;
+    letter-spacing:.42em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:500;
+  }
+
+  h1,h2,h3,h4{font-family:var(--f-serif);font-weight:400;letter-spacing:-.005em;line-height:1.05;}
+  h1{font-size:clamp(42px,6.2vw,92px);}
+  h2{font-size:clamp(34px,4.6vw,68px);}
+  h3{font-size:clamp(22px,2.2vw,32px);}
+
+  .wrap{max-width:1480px;margin:0 auto;padding:0 40px;}
+  .wrap-wide{max-width:1680px;margin:0 auto;padding:0 40px;}
+  .wrap-narrow{max-width:960px;margin:0 auto;padding:0 40px;}
+
+  /* ———— Announcement ———— */
+  .announce{
+    background:var(--forest);
+    color:var(--paper);
+    text-align:center;
+    padding:10px 20px;
+    font-size:10px;letter-spacing:.32em;text-transform:uppercase;
+    font-weight:400;
+  }
+  .announce span{opacity:.75;margin:0 22px;}
+
+  /* ———— Navigation ———— */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,243,236,.92);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line-light);
+  }
+  .nav-inner{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    padding:22px 40px;
+    gap:40px;
+  }
+  .nav-left{display:flex;gap:30px;align-items:center;}
+  .nav-right{display:flex;gap:28px;align-items:center;justify-content:flex-end;}
+  .logo{
+    font-family:var(--f-serif);
+    font-size:20px;
+    letter-spacing:.24em;
+    font-weight:500;
+    text-align:center;
+  }
+  .logo small{display:block;font-size:8px;letter-spacing:.5em;margin-top:4px;color:var(--muted);}
+
+  .nav a.link{
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    font-weight:500;
+    position:relative;
+    padding:6px 0;
+    transition:color .3s var(--ease);
+  }
+  .nav a.link:hover{color:var(--emerald);}
+  .nav a.link::after{
+    content:'';position:absolute;left:0;right:100%;bottom:-2px;
+    height:1px;background:var(--emerald);
+    transition:right .4s var(--ease);
+  }
+  .nav a.link:hover::after{right:0;}
+
+  .lang{font-size:10px;letter-spacing:.3em;color:var(--muted);}
+  .lang b{color:var(--ink);}
+
+  .icon-btn{
+    width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;
+    transition:opacity .3s var(--ease);
+  }
+  .icon-btn:hover{opacity:.55;}
+
+  .cart-count{
+    display:inline-block;margin-left:6px;font-size:10px;
+    background:var(--forest);color:var(--paper);
+    border-radius:50%;width:16px;height:16px;line-height:16px;text-align:center;
+  }
+
+  /* ———— Hero ———— */
+  .hero{
+    position:relative;
+    height:86vh;min-height:640px;
+    background-color:#1a2f24;
+    background-image:
+      linear-gradient(180deg,rgba(10,15,12,.25) 0%,rgba(10,15,12,.15) 45%,rgba(10,15,12,.55) 100%),
+      url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=2400&q=85');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    overflow:hidden;
+  }
+  .hero-inner{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:80px 56px;
+  }
+  .hero h1{
+    font-family:var(--f-serif);
+    font-weight:300;
+    font-size:clamp(40px,6vw,84px);
+    max-width:980px;
+    line-height:1.02;
+  }
+  .hero h1 em{font-style:italic;font-weight:400;}
+  .hero .sub{
+    margin-top:18px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;
+    opacity:.88;font-weight:400;
+  }
+  .hero .sub::before{content:'';display:inline-block;width:24px;height:1px;background:#fff;vertical-align:middle;margin-right:14px;opacity:.7;}
+
+  .hero-cta{
+    position:absolute;right:56px;bottom:120px;
+    display:inline-flex;align-items:center;gap:14px;
+    background:#fff;color:var(--ink);
+    padding:16px 32px;
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+    font-weight:500;
+    transition:all .4s var(--ease);
+  }
+  .hero-cta:hover{background:var(--forest);color:#fff;}
+  .hero-cta svg{width:14px;}
+
+  .hero-arrows{
+    position:absolute;right:56px;bottom:56px;display:flex;gap:18px;color:#fff;
+  }
+  .hero-arrows button{
+    width:36px;height:36px;border:1px solid rgba(255,255,255,.4);border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;
+    transition:background .3s var(--ease);
+  }
+  .hero-arrows button:hover{background:rgba(255,255,255,.15);}
+
+  .hero-meta{
+    position:absolute;left:56px;bottom:56px;
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;opacity:.85;
+  }
+  .hero-meta b{margin-right:12px;font-weight:500;}
+
+  /* ———— Dual Split ———— */
+  .dual{
+    display:grid;grid-template-columns:1fr 1fr;
+    min-height:72vh;
+  }
+  .dual > figure{
+    position:relative;overflow:hidden;
+  }
+  .dual img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease);}
+  .dual figure:hover img{transform:scale(1.04);}
+  .dual .explore-dot{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    pointer-events:none;
+  }
+  .explore-pill{
+    background:var(--paper);color:var(--ink);
+    padding:14px 28px;font-size:10px;letter-spacing:.32em;text-transform:uppercase;
+    font-weight:500;pointer-events:auto;
+    transition:all .4s var(--ease);
+  }
+  .explore-pill:hover{background:var(--forest);color:#fff;}
+  .dual .cap{
+    position:absolute;left:32px;bottom:28px;color:#fff;
+    font-size:10px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
+    text-shadow:0 1px 10px rgba(0,0,0,.4);
+  }
+
+  /* ———— Memo ———— */
+  .memo{padding:90px 20px;text-align:center;background:var(--paper);}
+  .memo .memo-line{
+    font-family:var(--f-serif);font-weight:400;
+    font-size:clamp(16px,1.5vw,20px);
+    letter-spacing:.04em;
+    margin:8px 0;color:var(--ink);
+  }
+  .memo .memo-line + .memo-line{color:#2a2a2a;}
+
+  /* ———— Section header ———— */
+  .sec-head{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    padding:90px 0 36px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:50px;
+  }
+  .sec-head h2{font-family:var(--f-serif);font-weight:300;font-style:italic;font-size:clamp(32px,3.4vw,48px);}
+  .sec-head .arrows{display:flex;gap:14px;align-items:center;font-size:11px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase;}
+  .sec-head .arrows a{padding:10px;transition:color .3s var(--ease);}
+  .sec-head .arrows a:hover{color:var(--emerald);}
+
+  /* ———— Product grid ———— */
+  .grid-4{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:28px;
+  }
+  .grid-3{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:40px;
+  }
+  .card-desc{
+    font-size:13px;line-height:1.65;color:var(--muted);
+    margin-top:10px;max-width:420px;
+  }
+  .card{cursor:pointer;}
+  .card-media{
+    position:relative;aspect-ratio:3/4;background:var(--cream);overflow:hidden;
+  }
+  .card-media::after{
+    content:'';position:absolute;inset:0;background:rgba(10,10,10,.02);
+    opacity:0;transition:opacity .4s var(--ease);
+  }
+  .card:hover .card-media::after{opacity:1;}
+  .card-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);}
+  .card:hover .card-media img{transform:scale(1.05);}
+  .card-badge{
+    position:absolute;top:16px;left:16px;z-index:2;
+    background:rgba(255,255,255,.92);padding:5px 10px;
+    font-size:9px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;
+  }
+  .card-badge.rare{background:var(--forest);color:#fff;}
+  .card-quick{
+    position:absolute;bottom:0;left:0;right:0;
+    background:rgba(255,255,255,.95);
+    padding:12px;text-align:center;
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;
+    transform:translateY(100%);transition:transform .4s var(--ease);
+  }
+  .card:hover .card-quick{transform:translateY(0);}
+
+  .card-name{font-family:var(--f-serif);font-size:18px;margin-top:18px;letter-spacing:.01em;}
+  .card-meta{
+    display:flex;justify-content:space-between;margin-top:6px;
+    font-size:11px;color:var(--muted);
+  }
+  .card-meta .price{color:var(--ink);font-weight:500;letter-spacing:.04em;}
+
+  /* ———— Manifesto / Editorial ———— */
+  .manifesto{
+    padding:140px 40px;text-align:center;
+    background:var(--cream);
+    position:relative;
+  }
+  .manifesto .glyph{
+    font-family:var(--f-serif);font-size:44px;color:var(--emerald);
+    margin-bottom:28px;
+    letter-spacing:.5em;
+  }
+  .manifesto p.lead{
+    font-family:var(--f-serif);font-weight:300;
+    font-size:clamp(22px,2.4vw,36px);
+    line-height:1.35;max-width:920px;margin:0 auto;
+    color:var(--ink);
+  }
+  .manifesto p.lead em{font-style:italic;color:var(--emerald);}
+  .manifesto .sig{margin-top:40px;font-size:10px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);}
+  .manifesto .sig::before{content:'—';margin-right:10px;}
+
+  /* ———— Cinematic banner ———— */
+  .cinematic{
+    position:relative;height:92vh;min-height:620px;
+    background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.55)),
+      url('https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?auto=format&fit=crop&w=2600&q=85') center/cover;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;text-align:center;padding:40px;
+  }
+  .cinematic .eyebrow{color:rgba(255,255,255,.7);}
+  .cinematic h2{
+    font-size:clamp(44px,6vw,94px);
+    font-weight:300;
+    margin:24px 0 28px;
+    max-width:1100px;
+  }
+  .cinematic h2 em{font-style:italic;font-weight:300;}
+  .cinematic p{
+    max-width:580px;margin:0 auto 40px;
+    font-size:14px;line-height:1.7;opacity:.86;
+  }
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:14px;
+    border:1px solid rgba(255,255,255,.6);
+    color:#fff;padding:18px 38px;
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
+    transition:all .4s var(--ease);
+  }
+  .btn-ghost:hover{background:#fff;color:var(--ink);border-color:#fff;}
+
+  /* ———— Collections by stone ———— */
+  .collections{padding:120px 0 40px;}
+  .coll-head{text-align:center;margin-bottom:80px;}
+  .coll-head h2{font-family:var(--f-serif);font-weight:300;font-size:clamp(40px,5vw,72px);margin-top:20px;}
+  .coll-head h2 em{font-style:italic;}
+  .coll-head p{max-width:520px;margin:24px auto 0;color:var(--muted);font-size:14px;line-height:1.7;}
+
+  .coll-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  .coll{
+    position:relative;aspect-ratio:3/4;overflow:hidden;cursor:pointer;
+    background:var(--bone);
+  }
+  .coll img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease);}
+  .coll:hover img{transform:scale(1.06);}
+  .coll::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.6) 100%);
+    z-index:1;
+  }
+  .coll-label{
+    position:absolute;z-index:2;left:50%;bottom:28px;
+    transform:translateX(-50%);
+    background:var(--ink);color:var(--paper);
+    padding:11px 22px;
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
+    white-space:nowrap;
+    transition:background .3s var(--ease);
+  }
+  .coll:hover .coll-label{background:var(--emerald);}
+  .coll-count{
+    position:absolute;z-index:2;top:20px;right:20px;
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#fff;opacity:.8;
+  }
+  .tabs{
+    display:inline-flex;align-items:center;gap:22px;margin-top:36px;
+  }
+  .tab{
+    font-family:var(--f-serif);font-weight:400;font-style:italic;
+    font-size:22px;color:var(--muted);
+    padding:6px 2px;border-bottom:1px solid transparent;
+    transition:color .3s var(--ease),border-color .3s var(--ease);
+  }
+  .tab.active{color:var(--ink);border-color:var(--ink);}
+  .tab-divider{color:var(--muted);}
+
+  .cta-tile{
+    background:var(--cream);display:flex;align-items:center;justify-content:center;
+    aspect-ratio:auto;height:100%;
+  }
+  .cta-tile img{display:none;}
+  .cta-tile::before{display:none;}
+  .cta-tile-inner{text-align:center;padding:40px;}
+  .cta-tile-inner .eyebrow{margin-bottom:14px;}
+  .cta-tile-inner h3{font-size:clamp(24px,2.4vw,36px);font-weight:300;}
+  .cta-tile-inner h3 em{font-style:italic;color:var(--emerald);}
+
+  /* ———— Craft / Pillars ———— */
+  .craft{
+    padding:140px 0;background:var(--forest);color:var(--paper);
+  }
+  .craft-head{text-align:center;margin-bottom:100px;}
+  .craft-head .eyebrow{color:rgba(246,243,236,.55);}
+  .craft-head h2{font-family:var(--f-serif);font-weight:300;font-size:clamp(40px,5vw,68px);margin-top:20px;max-width:900px;margin-left:auto;margin-right:auto;}
+  .craft-head h2 em{font-style:italic;color:var(--gold);}
+
+  .craft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;}
+  .pillar{text-align:center;padding:0 20px;}
+  .pillar .num{
+    font-family:var(--f-serif);font-style:italic;font-size:34px;color:var(--gold);
+    margin-bottom:18px;
+  }
+  .pillar h3{font-family:var(--f-serif);font-weight:400;font-size:26px;margin-bottom:18px;}
+  .pillar p{font-size:13px;line-height:1.8;opacity:.72;max-width:320px;margin:0 auto;}
+  .pillar .divider{width:30px;height:1px;background:var(--gold);margin:22px auto;opacity:.7;}
+
+  /* ———— Featured stone ———— */
+  .featured{
+    display:grid;grid-template-columns:1.05fr 1fr;align-items:stretch;
+    min-height:88vh;
+  }
+  .featured .media{
+    background:url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1800&q=85') center/cover;
+    position:relative;
+  }
+  .featured .media::before{
+    content:'';position:absolute;inset:0;background:rgba(19,34,24,.1);
+  }
+  .featured .content{
+    background:var(--paper);padding:110px 80px;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .featured .content .eyebrow{margin-bottom:24px;}
+  .featured .content h2{font-size:clamp(38px,4.2vw,62px);font-weight:300;}
+  .featured .content h2 em{font-style:italic;color:var(--emerald);}
+  .featured .content .meta{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:26px 50px;
+    margin:46px 0;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .featured .meta .row small{display:block;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+  .featured .meta .row b{font-family:var(--f-serif);font-weight:400;font-size:20px;}
+
+  .featured p.copy{font-size:14px;line-height:1.8;color:#2a2a2a;max-width:480px;}
+  .featured .price-line{
+    margin-top:40px;display:flex;align-items:center;gap:22px;
+    font-family:var(--f-serif);font-size:26px;
+  }
+  .featured .price-line small{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);font-family:var(--f-sans);}
+  .btn-dark{
+    display:inline-flex;align-items:center;gap:14px;
+    background:var(--ink);color:var(--paper);
+    padding:18px 38px;margin-top:36px;align-self:flex-start;
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
+    transition:background .3s var(--ease);
+  }
+  .btn-dark:hover{background:var(--emerald);}
+
+  /* ———— Journal / Editorial ———— */
+  .journal{padding:140px 0;}
+  .journal-head{
+    display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;
+    border-bottom:1px solid var(--line);padding-bottom:30px;
+  }
+  .journal-head h2{font-family:var(--f-serif);font-weight:300;font-style:italic;font-size:clamp(36px,4.2vw,56px);}
+  .journal-head a{font-size:10px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--emerald);}
+
+  .journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;}
+  .story{}
+  .story-media{aspect-ratio:4/5;overflow:hidden;background:var(--cream);}
+  .story-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease);}
+  .story:hover .story-media img{transform:scale(1.04);}
+  .story .cat{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-top:24px;display:block;}
+  .story h3{font-family:var(--f-serif);font-weight:400;font-size:26px;margin:12px 0 10px;line-height:1.2;}
+  .story p{font-size:13px;line-height:1.7;color:var(--muted);max-width:360px;}
+  .story .read{margin-top:16px;display:inline-block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;border-bottom:1px solid var(--ink);padding-bottom:3px;}
+
+  /* ———— Services strip ———— */
+  .services{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    display:grid;grid-template-columns:repeat(4,1fr);
+    background:var(--paper);
+  }
+  .serv{
+    padding:46px 30px;text-align:center;border-right:1px solid var(--line);
+  }
+  .serv:last-child{border-right:none;}
+  .serv svg{width:26px;height:26px;stroke:var(--emerald);margin:0 auto 18px;display:block;}
+  .serv h4{font-family:var(--f-serif);font-weight:400;font-size:18px;margin-bottom:6px;}
+  .serv p{font-size:11px;color:var(--muted);letter-spacing:.08em;}
+
+  /* ———— Press ———— */
+  .press{padding:90px 0;text-align:center;}
+  .press .eyebrow{color:var(--muted);}
+  .press .logos{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-top:44px;gap:60px;
+    flex-wrap:wrap;
+  }
+  .press .logos span{
+    font-family:var(--f-serif);font-style:italic;font-size:22px;
+    color:var(--muted);opacity:.7;letter-spacing:.08em;
+    transition:opacity .3s var(--ease);
+  }
+  .press .logos span:hover{opacity:1;color:var(--ink);}
+
+  /* ———— Instagram feed ———— */
+  .insta{padding:140px 0 80px;}
+  .insta-head{text-align:center;margin-bottom:60px;}
+  .insta-head h2{font-family:var(--f-serif);font-weight:300;font-size:clamp(36px,4.2vw,58px);}
+  .insta-head h2 em{font-style:italic;color:var(--emerald);}
+  .insta-head a{display:inline-block;margin-top:18px;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
+  .insta-head a:hover{color:var(--emerald);}
+
+  .insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;}
+  .insta-tile{
+    position:relative;aspect-ratio:1;overflow:hidden;cursor:pointer;background:var(--cream);
+  }
+  .insta-tile img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .insta-tile:hover img{transform:scale(1.08);}
+  .insta-tile::after{
+    content:'';position:absolute;inset:0;background:rgba(19,34,24,.35);
+    opacity:0;transition:opacity .3s var(--ease);
+  }
+  .insta-tile:hover::after{opacity:1;}
+  .insta-tile svg{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    color:#fff;width:22px;opacity:0;transition:opacity .3s var(--ease);z-index:2;
+  }
+  .insta-tile:hover svg{opacity:1;}
+
+  /* ———— Contact ———— */
+  .contact{padding:140px 0;background:var(--paper);}
+  .contact-head{text-align:center;margin-bottom:80px;}
+  .contact-head h2{font-family:var(--f-serif);font-weight:300;font-size:clamp(40px,5vw,68px);margin-top:18px;}
+  .contact-head h2 em{font-style:italic;}
+  .contact-head p{max-width:520px;margin:20px auto 0;color:var(--muted);font-size:14px;line-height:1.7;}
+  .contact-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:80px;max-width:1180px;margin:0 auto;}
+  .contact-form{display:flex;flex-direction:column;gap:28px;}
+  .contact-form label{display:flex;flex-direction:column;gap:8px;}
+  .contact-form label span{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);font-weight:500;}
+  .contact-form input,
+  .contact-form textarea{
+    border:none;border-bottom:1px solid var(--line);
+    background:transparent;padding:10px 0;
+    font-family:var(--f-sans);font-size:15px;color:var(--ink);
+    outline:none;resize:vertical;font-weight:300;
+    transition:border-color .3s var(--ease);
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus{border-color:var(--emerald);}
+  .contact-form .btn-dark{align-self:flex-start;margin-top:10px;}
+
+  .contact-info{
+    padding:40px 0;border-left:1px solid var(--line);padding-left:60px;
+    display:flex;flex-direction:column;gap:28px;
+  }
+  .info-block small{
+    display:block;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;
+  }
+  .info-block b,
+  .info-block a{
+    font-family:var(--f-serif);font-weight:400;font-size:20px;color:var(--ink);
+    transition:color .3s var(--ease);
+  }
+  .info-block a:hover{color:var(--emerald);}
+
+  @media (max-width:1024px){
+    .contact-grid{grid-template-columns:1fr;gap:50px;}
+    .contact-info{border-left:none;border-top:1px solid var(--line);padding:40px 0 0;}
+  }
+
+  /* ———— Newsletter ———— */
+  .newsletter{
+    background:var(--cream);padding:140px 40px;text-align:center;
+  }
+  .newsletter .eyebrow{color:var(--emerald);}
+  .newsletter h2{font-family:var(--f-serif);font-weight:300;font-size:clamp(38px,4.5vw,64px);margin:22px 0 16px;}
+  .newsletter h2 em{font-style:italic;}
+  .newsletter p{max-width:520px;margin:0 auto 44px;font-size:14px;line-height:1.7;color:var(--muted);}
+  .form{
+    display:flex;max-width:540px;margin:0 auto;
+    border-bottom:1px solid var(--ink);
+  }
+  .form input{
+    flex:1;border:none;background:none;padding:14px 4px;
+    font-family:var(--f-sans);font-size:14px;color:var(--ink);
+    outline:none;
+  }
+  .form input::placeholder{color:var(--muted);letter-spacing:.05em;}
+  .form button{
+    font-size:10px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
+    padding:14px 10px;
+  }
+  .newsletter .disclaimer{margin-top:24px;font-size:10px;letter-spacing:.12em;color:var(--muted);}
+
+  /* ———— Footer ———— */
+  footer{
+    background:var(--forest);color:var(--paper);
+    padding:110px 40px 30px;
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:60px;
+    max-width:1480px;margin:0 auto 80px;
+  }
+  .foot-brand .logo{text-align:left;font-size:26px;margin-bottom:24px;}
+  .foot-brand .logo small{color:rgba(246,243,236,.6);}
+  .foot-brand p{font-size:13px;line-height:1.8;opacity:.7;max-width:340px;margin-bottom:30px;}
+  .foot-brand .socials{display:flex;gap:14px;}
+  .foot-brand .socials a{
+    width:36px;height:36px;border:1px solid rgba(246,243,236,.2);border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;
+    transition:background .3s var(--ease);
+  }
+  .foot-brand .socials a:hover{background:rgba(246,243,236,.08);}
+
+  .foot h5{font-family:var(--f-serif);font-weight:400;font-size:16px;margin-bottom:22px;letter-spacing:.08em;}
+  .foot ul{list-style:none;}
+  .foot ul li{margin-bottom:12px;font-size:12px;opacity:.7;letter-spacing:.04em;transition:opacity .3s var(--ease);cursor:pointer;}
+  .foot ul li:hover{opacity:1;}
+
+  .foot-bottom{
+    border-top:1px solid rgba(246,243,236,.12);
+    padding-top:28px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.55;
+    max-width:1480px;margin:0 auto;
+    flex-wrap:wrap;gap:20px;
+  }
+  .foot-bottom .pay{display:flex;gap:16px;}
+  .foot-bottom .pay span{letter-spacing:.15em;}
+
+  /* ———— Reveals ———— */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ———— Responsive ———— */
+  @media (max-width:1024px){
+    .grid-4,.grid-3,.coll-grid{grid-template-columns:repeat(2,1fr);}
+    .insta-grid{grid-template-columns:repeat(3,1fr);}
+    .craft-grid,.journal-grid{grid-template-columns:1fr;gap:50px;}
+    .featured{grid-template-columns:1fr;}
+    .featured .media{min-height:60vh;}
+    .featured .content{padding:70px 40px;}
+    .services{grid-template-columns:repeat(2,1fr);}
+    .serv{border-bottom:1px solid var(--line);}
+    .foot-grid{grid-template-columns:repeat(2,1fr);}
+    .nav-inner{grid-template-columns:auto auto;gap:14px;}
+    .nav-left{display:none;}
+    .hero-inner{padding:60px 30px;}
+    .hero-cta{right:30px;bottom:100px;padding:12px 22px;}
+    .hero-arrows,.hero-meta{left:30px;right:30px;bottom:40px;}
+    .wrap,.wrap-wide{padding:0 24px;}
+  }
+  @media (max-width:640px){
+    .dual{grid-template-columns:1fr;}
+    .grid-4,.grid-3,.coll-grid{grid-template-columns:1fr;}
+    .insta-grid{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr;gap:40px;}
+    .nav-right{gap:14px;}
+    .press .logos{gap:30px;}
+    .announce span:nth-child(even){display:none;}
+    h1{font-size:42px;}
+    h2{font-size:34px;}
+    .manifesto,.cinematic,.newsletter,.craft,.journal,.collections,.insta{padding-left:24px;padding-right:24px;}
+    .manifesto{padding-top:100px;padding-bottom:100px;}
+  }
+
+  /* subtle selection */
+  ::selection{background:var(--emerald);color:var(--paper);}
+</style>
+</head>
+<body>
+
+<!-- Announcement -->
+<div class="announce">
+  <span>Verified origin</span>
+  <span>·</span>
+  <span>Fully traceable</span>
+  <span>·</span>
+  <span>Based in Brno, Czech Republic</span>
+</div>
+
+<!-- Navigation -->
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="#shop" class="link">New Gems</a>
+      <a href="#collections" class="link">All Products</a>
+      <a href="#about" class="link">About</a>
+      <a href="#contact" class="link">Contact</a>
+    </div>
+    <a href="#" class="logo">
+      NEXTLEVEL GEMS
+      <small>TRANSPARENCY IS THE KEY</small>
+    </a>
+    <div class="nav-right">
+      <span class="lang"><b>EN</b> / CZ</span>
+      <button class="icon-btn" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Account">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 7h16l-2 13H6L4 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Every facet <em>tells</em> a story</h1>
+    <p class="sub">Rare Gems  ·  Honest Craft  ·  Since 2019</p>
+  </div>
+  <a href="#shop" class="hero-cta">
+    View Products
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+  </a>
+  <div class="hero-meta">
+    <b>01 / 03</b> Emerald — 2,275 ct · No Oil
+  </div>
+  <div class="hero-arrows">
+    <button aria-label="Previous"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button aria-label="Next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m9 6 6 6-6 6"/></svg></button>
+  </div>
+</section>
+
+<!-- Dual split -->
+<section class="dual">
+  <figure>
+    <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=1600&q=85" alt="Faceted collection" />
+    <div class="cap">Faceted — Cut with intent</div>
+  </figure>
+  <figure>
+    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1600&q=85" alt="Rough collection" />
+    <div class="explore-dot"><a class="explore-pill" href="#shop">Explore</a></div>
+    <div class="cap">Rough — Untouched material</div>
+  </figure>
+</section>
+
+<!-- Memo statement -->
+<section class="memo">
+  <div class="wrap-narrow">
+    <div class="memo-line">Every gem fully verified — origin, quality, and value.</div>
+    <div class="memo-line">Untreated stones whenever nature allows.</div>
+    <div class="memo-line">Direct from miner and cutter — no middlemen.</div>
+  </div>
+</section>
+
+<!-- New Gems -->
+<section id="shop" class="wrap">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Fresh Arrivals</div>
+      <h2>New Gems</h2>
+    </div>
+    <div class="arrows">
+      <span>01 / 03</span>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m15 18-6-6 6-6"/></svg></a>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m9 6 6 6-6 6"/></svg></a>
+    </div>
+  </div>
+
+  <div class="grid-3">
+    <article class="card">
+      <div class="card-media">
+        <span class="card-badge">Merelani</span>
+        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85" alt="Tsavorite" />
+        <div class="card-quick">View</div>
+      </div>
+      <h3 class="card-name">Tsavorite</h3>
+      <p class="card-desc">Fine Merelani tsavorite in modern barion oval cut, showing a bright grassy-green color and excellent brilliance.</p>
+      <div class="card-meta">
+        <span>Barion Oval · Merelani, TZ</span>
+        <span class="price">1,635 ct</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <span class="card-badge rare">Paraíba</span>
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85" alt="Paraiba Tourmaline" />
+        <div class="card-quick">View</div>
+      </div>
+      <h3 class="card-name">Paraíba Tourmaline</h3>
+      <p class="card-desc">An exceptional rare Paraíba from Mozambique — intense neon blue-green hue with captivating inner light. Faceted in a drop cut, extraordinary fire and saturation.</p>
+      <div class="card-meta">
+        <span>Drop Cut · Mozambique</span>
+        <span class="price">2,36 ct</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <span class="card-badge rare">No Oil</span>
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85" alt="Emerald" />
+        <div class="card-quick">View</div>
+      </div>
+      <h3 class="card-name">Emerald</h3>
+      <p class="card-desc">Fine-quality emerald showing vivid green color with delicate silk inclusions. Exceptional purity for a Type III gem — completely untreated. A collector's stone.</p>
+      <div class="card-meta">
+        <span>Type III · Untreated</span>
+        <span class="price">2,275 ct</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Manifesto -->
+<section class="manifesto reveal" id="about">
+  <div class="glyph">N · L · G</div>
+  <p class="lead">
+    At Nextlevel Gems, we believe that <em>transparency is the key</em>
+    to building trust with our clients. Every gem we provide comes with
+    verified details about <em>its origin, quality, and value</em>.
+  </p>
+  <div class="sig">Pavel Gadas, Founder</div>
+</section>
+
+<!-- Cinematic banner -->
+<section class="cinematic">
+  <div>
+    <div class="eyebrow">The House</div>
+    <h2>Know where your gems <em>come from.</em></h2>
+    <p>From our studio in Brno, we work directly with miners and master cutters in Tanzania, Mozambique, Colombia and Sri Lanka. Every stone we accept has a name, a provenance, and a story we can tell in full.</p>
+    <a class="btn-ghost" href="#contact">
+      Reach Out
+      <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- Collections -->
+<section id="collections" class="collections wrap-wide">
+  <div class="coll-head reveal">
+    <div class="eyebrow">All Products</div>
+    <h2>Faceted <em>&amp;</em> Rough</h2>
+    <p>Thirteen species, two finishes. Browse by stone, by cut, or by what catches your eye first. Every piece in our collection comes fully documented.</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="faceted">Faceted</button>
+      <span class="tab-divider">·</span>
+      <button class="tab" data-tab="rough">Rough</button>
+    </div>
+  </div>
+
+  <!-- Faceted -->
+  <div class="coll-grid" data-pane="faceted">
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=85" alt="Beryl" /><div class="coll-label">Beryl</div></a>
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85" alt="Garnet" /><div class="coll-label">Garnet</div></a>
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85" alt="Chrysoberyl" /><div class="coll-label">Chrysoberyl</div></a>
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=900&q=85" alt="Kornerupine" /><div class="coll-label">Kornerupine</div></a>
+  </div>
+  <div class="coll-grid" data-pane="faceted" style="margin-top:18px;">
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=85" alt="Quartz" /><div class="coll-label">Quartz</div></a>
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85" alt="Ruby" /><div class="coll-label">Ruby</div></a>
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85" alt="Peridot" /><div class="coll-label">Peridot</div></a>
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?auto=format&fit=crop&w=900&q=85" alt="Sapphire" /><div class="coll-label">Sapphire</div></a>
+  </div>
+  <div class="coll-grid" data-pane="faceted" style="margin-top:18px;">
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=85" alt="Spinel" /><div class="coll-label">Spinel</div></a>
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85" alt="Tanzanite" /><div class="coll-label">Tanzanite</div></a>
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85" alt="Topaz" /><div class="coll-label">Topaz</div></a>
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85" alt="Tourmaline" /><div class="coll-label">Tourmaline</div></a>
+  </div>
+  <div class="coll-grid" data-pane="faceted" style="margin-top:18px;grid-template-columns:1fr 3fr;">
+    <a class="coll" href="#"><span class="coll-count">Faceted</span><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=900&q=85" alt="Zircon" /><div class="coll-label">Zircon</div></a>
+    <a class="coll cta-tile" href="#">
+      <div class="cta-tile-inner">
+        <div class="eyebrow">Browse all</div>
+        <h3 class="serif">All faceted gems <em>→</em></h3>
+      </div>
+    </a>
+  </div>
+
+  <!-- Rough -->
+  <div class="coll-grid" data-pane="rough" style="display:none;">
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85" alt="Beryl rough" /><div class="coll-label">Beryl</div></a>
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85" alt="Garnet rough" /><div class="coll-label">Garnet</div></a>
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=900&q=85" alt="Chrysoberyl rough" /><div class="coll-label">Chrysoberyl</div></a>
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=85" alt="Kornerupine rough" /><div class="coll-label">Kornerupine</div></a>
+  </div>
+  <div class="coll-grid" data-pane="rough" style="display:none;margin-top:18px;">
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85" alt="Quartz rough" /><div class="coll-label">Quartz</div></a>
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?auto=format&fit=crop&w=900&q=85" alt="Ruby rough" /><div class="coll-label">Ruby</div></a>
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=85" alt="Peridot rough" /><div class="coll-label">Peridot</div></a>
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85" alt="Sapphire rough" /><div class="coll-label">Sapphire</div></a>
+  </div>
+  <div class="coll-grid" data-pane="rough" style="display:none;margin-top:18px;">
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85" alt="Spinel rough" /><div class="coll-label">Spinel</div></a>
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85" alt="Tanzanite rough" /><div class="coll-label">Tanzanite</div></a>
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=900&q=85" alt="Topaz rough" /><div class="coll-label">Topaz</div></a>
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=85" alt="Tourmaline rough" /><div class="coll-label">Tourmaline</div></a>
+  </div>
+  <div class="coll-grid" data-pane="rough" style="display:none;margin-top:18px;grid-template-columns:1fr 3fr;">
+    <a class="coll" href="#"><span class="coll-count">Rough</span><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85" alt="Zircon rough" /><div class="coll-label">Zircon</div></a>
+    <a class="coll cta-tile" href="#">
+      <div class="cta-tile-inner">
+        <div class="eyebrow">Browse all</div>
+        <h3 class="serif">All rough material <em>→</em></h3>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Craft / Pillars -->
+<section class="craft">
+  <div class="wrap">
+    <div class="craft-head reveal">
+      <div class="eyebrow">Our Standard</div>
+      <h2>Three commitments behind <em>every stone</em> we carry.</h2>
+    </div>
+
+    <div class="craft-grid">
+      <div class="pillar reveal">
+        <div class="num">I.</div>
+        <h3>Origin</h3>
+        <div class="divider"></div>
+        <p>Direct sourcing from mines and small-scale cutters. No middlemen, no secondhand stories. We know where each stone comes from — literally.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="num">II.</div>
+        <h3>Quality</h3>
+        <div class="divider"></div>
+        <p>Every gem is evaluated for color, clarity, cut and treatment. We favour untreated material whenever nature allows — and always say so when it doesn't.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="num">III.</div>
+        <h3>Value</h3>
+        <div class="divider"></div>
+        <p>Full disclosure on every piece — weight, measurements, origin, and any treatment. Fair pricing based on what the stone actually is, not on what it could pretend to be.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Stone -->
+<section class="featured">
+  <div class="media"></div>
+  <div class="content">
+    <div class="eyebrow">Stone of the Month</div>
+    <h2>Emerald — <em>No Oil</em> — 2,275 ct</h2>
+    <div class="meta">
+      <div class="row"><small>Species</small><b>Emerald</b></div>
+      <div class="row"><small>Treatment</small><b>None · No Oil</b></div>
+      <div class="row"><small>Type</small><b>Type III</b></div>
+      <div class="row"><small>Color</small><b>Vivid Green</b></div>
+    </div>
+    <p class="copy">
+      Fine-quality emerald showing vivid green color with delicate silk inclusions. Exceptional purity for a Type III gem — completely untreated (No Oil). A collector's stone, presented with a full grading report and documented provenance.
+    </p>
+    <div class="price-line">
+      <small>Price on request</small>
+      Enquire
+    </div>
+    <a class="btn-dark" href="#contact">
+      Request details
+      <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- Services strip -->
+<section class="services">
+  <div class="serv">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M3 7h18l-2 13H5L3 7Z"/><path d="M8 7V5a4 4 0 1 1 8 0v2"/></svg>
+    <h4>Insured shipping</h4>
+    <p>Worldwide, tracked</p>
+  </div>
+  <div class="serv">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M12 2 4 6v6c0 5 4 9 8 10 4-1 8-5 8-10V6l-8-4Z"/></svg>
+    <h4>Verified origin</h4>
+    <p>Documented provenance</p>
+  </div>
+  <div class="serv">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0Z"/><path d="M12 8v4l3 2"/></svg>
+    <h4>14-day return</h4>
+    <p>No questions asked</p>
+  </div>
+  <div class="serv">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M4 6h16v12H4z"/><path d="M4 10h16"/></svg>
+    <h4>Private viewing</h4>
+    <p>Brno · by appointment</p>
+  </div>
+</section>
+
+<!-- Journal -->
+<section id="journal" class="journal wrap">
+  <div class="journal-head">
+    <h2>Journal</h2>
+    <a href="#">All stories →</a>
+  </div>
+  <div class="journal-grid">
+    <article class="story reveal">
+      <div class="story-media"><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=85" alt="" /></div>
+      <span class="cat">Field Notes</span>
+      <h3>Inside the Merelani Tsavorite mines</h3>
+      <p>A closer look at the unique geology that gives Merelani tsavorite its signature grassy green.</p>
+      <a class="read" href="#">Read</a>
+    </article>
+    <article class="story reveal">
+      <div class="story-media"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85" alt="" /></div>
+      <span class="cat">Craft</span>
+      <h3>What "No Oil" actually means</h3>
+      <p>A short primer on emerald treatments, Type III clarity and why untreated stones are so rare.</p>
+      <a class="read" href="#">Read</a>
+    </article>
+    <article class="story reveal">
+      <div class="story-media"><img src="https://images.unsplash.com/photo-1518756131217-31eb79b20e8f?auto=format&fit=crop&w=900&q=85" alt="" /></div>
+      <span class="cat">Collecting</span>
+      <h3>Reading a Paraíba</h3>
+      <p>Neon, saturation, origin — three things that separate an ordinary tourmaline from a great one.</p>
+      <a class="read" href="#">Read</a>
+    </article>
+  </div>
+</section>
+
+<!-- Press -->
+<section class="press wrap-narrow">
+  <div class="eyebrow">As seen in</div>
+  <div class="logos">
+    <span>VOGUE CS</span>
+    <span>FORBES ·</span>
+    <span>Hodinky &amp; klenoty</span>
+    <span>MONOCLE</span>
+    <span>Dolce Vita</span>
+  </div>
+</section>
+
+<!-- Instagram -->
+<section class="insta wrap-wide">
+  <div class="insta-head reveal">
+    <div class="eyebrow">@nextlevel_gems</div>
+    <h2>Living <em>in the light</em> of stones</h2>
+    <a href="https://www.instagram.com/nextlevel_gems/" target="_blank">Follow us on Instagram →</a>
+  </div>
+  <div class="insta-grid">
+    <a class="insta-tile" href="#"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=85" alt="" /><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3h9Zm-4.5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.25-1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg></a>
+    <a class="insta-tile" href="#"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=85" alt="" /><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3h9Zm-4.5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.25-1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg></a>
+    <a class="insta-tile" href="#"><img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=85" alt="" /><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3h9Zm-4.5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.25-1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg></a>
+    <a class="insta-tile" href="#"><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=85" alt="" /><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3h9Zm-4.5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.25-1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg></a>
+    <a class="insta-tile" href="#"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=85" alt="" /><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3h9Zm-4.5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.25-1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg></a>
+    <a class="insta-tile" href="#"><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=600&q=85" alt="" /><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3h9Zm-4.5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.25-1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg></a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Contact <em>Us</em></h2>
+      <p>Have any questions? Reach out and we'll get back to you as soon as possible.</p>
+    </div>
+
+    <div class="contact-grid">
+      <form class="contact-form" onsubmit="event.preventDefault();this.querySelector('.send').textContent='Sent — thank you.';">
+        <label><span>Your name</span><input type="text" required /></label>
+        <label><span>Email</span><input type="email" required placeholder="you@example.com" /></label>
+        <label><span>Message</span><textarea rows="5" required placeholder="Tell us which stone you're after, or ask anything."></textarea></label>
+        <button class="btn-dark send" type="submit">
+          Send Message
+          <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </button>
+      </form>
+
+      <aside class="contact-info">
+        <div class="info-block">
+          <small>Email</small>
+          <a href="mailto:info@nextlvlgem.com">info@nextlvlgem.com</a>
+        </div>
+        <div class="info-block">
+          <small>Instagram</small>
+          <a href="https://www.instagram.com/nextlevel_gems/" target="_blank">@nextlevel_gems</a>
+        </div>
+        <div class="info-block">
+          <small>Founder</small>
+          <b>Pavel Gadas</b>
+        </div>
+        <div class="info-block">
+          <small>Studio</small>
+          <b>Brno · Czech Republic</b>
+        </div>
+        <div class="info-block">
+          <small>Business ID</small>
+          <b>14414171</b>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+  <div class="eyebrow">The List</div>
+  <h2>New gems, <em>first</em></h2>
+  <p>Be the first to see new arrivals. No spam, no discounts — just stones, 48 hours before everyone else.</p>
+  <form class="form" onsubmit="event.preventDefault();this.querySelector('input').value='';this.querySelector('button').textContent='Thank you.';">
+    <input type="email" required placeholder="your@email.com" />
+    <button type="submit">Subscribe →</button>
+  </form>
+  <div class="disclaimer">Unsubscribe anytime in one click.</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot foot-brand">
+      <div class="logo">
+        NEXTLEVEL GEMS
+        <small>TRANSPARENCY IS THE KEY</small>
+      </div>
+      <p>Curated rare gemstones sourced directly from miners and master cutters. Every stone fully documented — origin, quality, and value.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/nextlevel_gems/" target="_blank" aria-label="Instagram">
+          <svg width="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>
+        </a>
+        <a href="mailto:info@nextlvlgem.com" aria-label="Email">
+          <svg width="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="foot">
+      <h5>Faceted</h5>
+      <ul>
+        <li>Beryl</li>
+        <li>Garnet</li>
+        <li>Chrysoberyl</li>
+        <li>Kornerupine</li>
+        <li>Quartz</li>
+        <li>Ruby</li>
+        <li>Peridot</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h5>Faceted cont.</h5>
+      <ul>
+        <li>Sapphire</li>
+        <li>Spinel</li>
+        <li>Tanzanite</li>
+        <li>Topaz</li>
+        <li>Tourmaline</li>
+        <li>Zircon</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h5>House</h5>
+      <ul>
+        <li>New Gems</li>
+        <li>All Products</li>
+        <li>About</li>
+        <li>Journal</li>
+        <li>Press</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h5>Contact</h5>
+      <ul>
+        <li>Pavel Gadas</li>
+        <li>Brno · Czech Republic</li>
+        <li>info@nextlvlgem.com</li>
+        <li>@nextlevel_gems</li>
+        <li>Business ID: 14414171</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Nextlevel Gems — All rights reserved</span>
+    <div class="pay">
+      <span>VISA</span><span>MC</span><span>AMEX</span><span>Bank Transfer</span>
+    </div>
+    <span>Privacy · Terms · Cookies</span>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Faceted / Rough tab switching
+  const tabs=document.querySelectorAll('.tab');
+  tabs.forEach(t=>{
+    t.addEventListener('click',()=>{
+      tabs.forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      const which=t.dataset.tab;
+      document.querySelectorAll('[data-pane]').forEach(p=>{
+        p.style.display=(p.dataset.pane===which)?'grid':'none';
+      });
+    });
+  });
+
+  // Subtle parallax on hero image
+  const hero=document.querySelector('.hero');
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY;
+    if(y<window.innerHeight && hero){
+      hero.style.backgroundPositionY=`calc(50% + ${y*0.15}px)`;
+    }
+  },{passive:true});
+</script>
+</body>
+</html>
