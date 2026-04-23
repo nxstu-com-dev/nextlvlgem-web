@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Not Found — Nextlevel Gems</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --paper:#f6f3ec;
+    --emerald:#1f4630;
+    --muted:#7a736a;
+    --line:rgba(10,10,10,.12);
+    --f-serif:'Cormorant Garamond', 'Didot', serif;
+    --f-sans:'Inter', -apple-system, sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:var(--f-sans);font-weight:300;color:var(--ink);
+    background:var(--paper);min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    padding:40px;
+  }
+  .box{text-align:center;max-width:620px;}
+  .eyebrow{
+    font-size:10px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);
+    font-weight:500;margin-bottom:28px;
+  }
+  .number{
+    font-family:var(--f-serif);font-style:italic;font-weight:300;
+    font-size:clamp(90px,14vw,180px);line-height:1;color:var(--emerald);
+    margin-bottom:20px;
+  }
+  h1{
+    font-family:var(--f-serif);font-weight:300;
+    font-size:clamp(32px,4vw,52px);line-height:1.1;margin-bottom:18px;
+  }
+  h1 em{font-style:italic;}
+  p{
+    font-size:14px;line-height:1.7;color:var(--muted);
+    max-width:440px;margin:0 auto 40px;
+  }
+  a.btn{
+    display:inline-flex;align-items:center;gap:14px;
+    background:var(--ink);color:var(--paper);
+    padding:18px 36px;
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;
+    text-decoration:none;
+    transition:background .3s var(--ease);
+  }
+  a.btn:hover{background:var(--emerald);}
+  .brand{
+    margin-top:80px;font-family:var(--f-serif);font-size:14px;
+    letter-spacing:.28em;color:var(--muted);
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="eyebrow">Error 404</div>
+    <div class="number">404</div>
+    <h1>This stone <em>hasn&rsquo;t been cut yet.</em></h1>
+    <p>The page you&rsquo;re looking for doesn&rsquo;t exist — or has moved. Let&rsquo;s find something worth seeing.</p>
+    <a class="btn" href="/">
+      Back to the collection
+      <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+    </a>
+    <div class="brand">NEXTLEVEL GEMS</div>
+  </div>
+</body>
+</html>
