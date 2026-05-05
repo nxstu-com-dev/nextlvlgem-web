@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nextlevel Gems — Transparency is the key</title>
+<meta name="description" content="Curated collection of rare, traceable gemstones. Every gem comes with verified details about its origin, quality, and value." />
+<link rel="canonical" href="https://nextlvlgems.com/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nextlvlgems.com/" />
+<meta property="og:title" content="Nextlevel Gems — Transparency is the key" />
+<meta property="og:description" content="Curated collection of rare, traceable gemstones." />
+<meta property="og:image" content="https://nextlvlgems.com/og-image.jpg" />
+<meta property="og:site_name" content="Nextlevel Gems" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#132218" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --paper:#ffffff;
+    --cream:#f4f2ee;
+    --bone:#ded4c0;
+    --forest:#132218;
+    --emerald:#1f4630;
+    --gold:#a88a56;
+    --muted:#7a736a;
+    --line:rgba(10,10,10,.12);
+    --line-light:rgba(10,10,10,.06);
+    --f-serif:'Manrope','Helvetica Neue',-apple-system,sans-serif;
+    --f-sans:'Inter',-apple-system,sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--f-sans);font-weight:300;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+  .eyebrow{font-size:10px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);font-weight:500;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  ::selection{background:var(--emerald);color:var(--paper);}
+
+  /* ———— Nav (LV style: transparent over hero, solid on scroll OR hover) ———— */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;color:#fff;transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease);}
+  .nav.scrolled, .nav:hover{background:#fff;color:var(--ink);border-bottom:1px solid var(--line-light);box-shadow:0 1px 0 rgba(0,0,0,.02);}
+  .nav-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 40px;gap:40px;}
+  .nav-left{display:flex;gap:32px;align-items:center;justify-self:start;}
+  .nav-right{display:flex;gap:32px;align-items:center;justify-self:end;}
+  .logo{font-family:var(--f-serif);font-size:22px;letter-spacing:.18em;font-weight:700;color:inherit;text-align:center;}
+  .nav-action{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-serif);font-size:14px;font-weight:400;letter-spacing:.025em;color:inherit;cursor:pointer;background:none;border:none;padding:0;transition:opacity .3s var(--ease);}
+  .nav-action:hover{opacity:.7;}
+  .nav-action svg{width:18px;height:18px;flex-shrink:0;}
+  .nav-icon{display:inline-flex;align-items:center;justify-content:center;color:inherit;cursor:pointer;background:none;border:none;padding:4px;transition:opacity .3s var(--ease);}
+  .nav-icon:hover{opacity:.7;}
+  .nav-icon svg{width:20px;height:20px;}
+  .lang{font-family:var(--f-serif);font-size:14px;color:inherit;cursor:pointer;letter-spacing:.025em;transition:opacity .3s var(--ease);}
+  .lang:hover{opacity:.7;}
+  .lang b{font-weight:500;}
+
+  /* ———— Hero (LV-style centered, slight peek of next section) ———— */
+  .hero{position:relative;height:95vh;min-height:660px;margin-top:0;background-color:#1a2f24;background-image:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%),url('images/hero.webp');background-size:cover;background-position:center;overflow:hidden;color:#fff;}
+  .hero-content{
+    position:absolute;left:50%;bottom:80px;transform:translateX(-50%);
+    text-align:center;max-width:90%;
+  }
+  .hero-eyebrow{
+    font-family:var(--f-serif);font-weight:400;
+    font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    opacity:.95;margin-bottom:10px;
+  }
+  .hero-title{
+    font-family:var(--f-serif);font-weight:400;
+    font-size:26px;line-height:1.25;letter-spacing:.3px;
+    margin-bottom:14px;
+  }
+  .hero-title em{font-style:normal;font-weight:400;}
+  .hero-discover{
+    display:inline-flex;align-items:center;gap:8px;
+    color:#fff;
+    font-family:var(--f-serif);font-size:13px;letter-spacing:.025em;
+    padding-bottom:3px;border-bottom:1px solid rgba(255,255,255,.85);
+    transition:opacity .3s var(--ease);
+  }
+  .hero-discover:hover{opacity:.78;}
+  .hero-discover svg{width:12px;transition:transform .35s var(--ease);}
+  .hero-discover:hover svg{transform:translateY(2px);}
+
+  /* ———— Trust strip (hidden — LV style) ———— */
+  .trust-strip{display:none;background:var(--paper);padding:32px 40px;text-align:center;border-bottom:1px solid var(--line);}
+  .trust-strip .lines{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;font-family:var(--f-sans);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:500;}
+  .trust-strip .lines span{opacity:.85;}
+  .trust-strip .lines .dot{opacity:.4;}
+
+  /* ———— Section base (LV style) ———— */
+  .section{padding:50px 7vw 60px;max-width:1640px;margin:0 auto;}
+  .section-head{text-align:center;margin-bottom:36px;}
+  .section-head h2{
+    font-family:var(--f-serif);font-weight:400;
+    font-size:26px;line-height:1.3;letter-spacing:.3px;
+    color:var(--ink);max-width:520px;margin:0 auto;
+  }
+  .section-head p{max-width:520px;margin:18px auto 0;color:var(--muted);font-size:13px;line-height:1.7;}
+
+  /* ———— Gems grid (LV style 1:1) ———— */
+  .gems-grid{display:grid;grid-template-columns:repeat(4,1fr);column-gap:14px;row-gap:40px;}
+  .gem-card{display:block;text-align:center;cursor:pointer;}
+  .gem-img-wrap{aspect-ratio:1/1;background:var(--cream);overflow:hidden;margin-bottom:14px;position:relative;}
+  .gem-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease);}
+  .gem-card:hover .gem-img-wrap img{transform:scale(1.03);}
+  .gem-name{
+    font-family:var(--f-serif);font-weight:400;
+    font-size:13px;line-height:1.5;letter-spacing:.2px;
+    color:var(--ink);
+    transition:opacity .3s var(--ease);
+    margin:0;
+  }
+  .gem-card:hover .gem-name{opacity:.65;}
+  .gem-tax{display:none;}
+
+  /* ———— View all CTA (LV pill-button style) ———— */
+  .view-all-wrap{text-align:center;margin-top:50px;}
+  .view-all{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:transparent;color:var(--ink);
+    padding:12px 32px;
+    font-family:var(--f-serif);font-weight:400;font-size:13px;letter-spacing:.025em;
+    border:1px solid var(--ink);border-radius:999px;
+    text-decoration:none;
+    transition:background .3s var(--ease),color .3s var(--ease);
+  }
+  .view-all:hover{background:var(--ink);color:#fff;}
+
+  /* ———— Transition image (full-bleed, like LV) ———— */
+  .transition-image{
+    width:100%;height:78vh;min-height:520px;
+    background-size:cover;background-position:center;background-repeat:no-repeat;
+    margin:0;
+  }
+
+  /* ———— Filters / search ———— */
+  .controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px;padding-bottom:24px;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:20px;}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;}
+  .filter-btn{font-family:var(--f-serif);font-weight:400;font-size:12px;letter-spacing:.025em;padding:8px 18px;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;transition:all .3s var(--ease);cursor:pointer;}
+  .filter-btn:hover{border-color:var(--ink);}
+  .filter-btn.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .search-box{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--ink);padding:6px 0;}
+  .search-box input{border:none;background:transparent;outline:none;font-family:var(--f-sans);font-size:13px;width:200px;}
+  .results-count{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+  .empty-state{text-align:center;padding:80px 20px;color:var(--muted);grid-column:1 / -1;font-size:14px;letter-spacing:.06em;}
+
+  /* ———— About 2-col ———— */
+  .about-section{background:var(--cream);padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  .about-text{max-width:480px;justify-self:end;}
+  .about-text .eyebrow{margin-bottom:14px;}
+  .about-text h2{font-family:var(--f-serif);font-weight:400;font-size:clamp(22px,2.4vw,30px);line-height:1.2;margin-bottom:24px;letter-spacing:.18em;text-transform:uppercase;}
+  .about-text h2 em{font-style:italic;color:var(--emerald);text-transform:none;letter-spacing:0;}
+  .about-text p{font-size:14px;line-height:1.75;opacity:.86;margin-bottom:16px;}
+  .signature{margin-top:24px;margin-bottom:26px;font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--muted);}
+  .btn-dark{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:var(--paper);padding:12px 32px;font-family:var(--f-serif);font-weight:400;font-size:13px;letter-spacing:.025em;border:1px solid var(--ink);border-radius:999px;text-decoration:none;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease);}
+  .btn-dark:hover{background:transparent;color:var(--ink);}
+  .about-image{display:flex;align-items:center;justify-content:center;}
+  .about-image img{width:100%;max-width:480px;box-shadow:0 30px 80px rgba(10,10,10,.18);}
+
+  /* ———— Contact strip ———— */
+  .contact-strip{background:var(--paper);padding:90px 40px;text-align:center;}
+  .contact-strip .eyebrow{color:var(--emerald);margin-bottom:14px;}
+  .contact-strip h2{font-family:var(--f-serif);font-weight:400;font-size:clamp(22px,2.4vw,30px);margin-bottom:20px;letter-spacing:.22em;text-transform:uppercase;}
+  .contact-strip p{max-width:460px;margin:0 auto 30px;color:var(--muted);font-size:13px;line-height:1.7;}
+  .contact-buttons{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+  .btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:transparent;border:1px solid var(--ink);color:var(--ink);padding:12px 32px;font-family:var(--f-serif);font-weight:400;font-size:13px;letter-spacing:.025em;border-radius:999px;text-decoration:none;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease);}
+  .btn-outline:hover{background:var(--ink);color:var(--paper);}
+
+  /* ———— Footer (LV-style: white, 3-strip + 4-col + bottom legal + centered logo) ———— */
+  footer{background:var(--paper);color:var(--ink);padding:0;border-top:1px solid var(--line-light);}
+  .footer-services{display:grid;grid-template-columns:repeat(3,1fr);padding:70px 60px;gap:40px;border-bottom:1px solid var(--line-light);text-align:center;max-width:1640px;margin:0 auto;}
+  .footer-service-eyebrow{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;font-weight:500;}
+  .footer-service-title{font-family:var(--f-serif);font-weight:400;font-size:20px;line-height:1.3;letter-spacing:.3px;margin-bottom:16px;color:var(--ink);}
+  .footer-service-link{font-family:var(--f-serif);font-size:13px;letter-spacing:.025em;border-bottom:1px solid var(--ink);padding-bottom:2px;display:inline-block;color:var(--ink);transition:opacity .3s var(--ease);}
+  .footer-service-link:hover{opacity:.65;}
+  .footer-main{display:grid;grid-template-columns:repeat(4,1fr);padding:70px 60px;gap:60px;border-bottom:1px solid var(--line-light);max-width:1640px;margin:0 auto;}
+  .footer-main h5{font-family:var(--f-sans);font-weight:500;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);margin-bottom:24px;}
+  .footer-main ul{list-style:none;}
+  .footer-main li{margin-bottom:12px;}
+  .footer-main a{font-size:14px;color:var(--ink);transition:opacity .3s var(--ease);}
+  .footer-main a:hover{opacity:.6;}
+  .footer-main p{font-size:13px;line-height:1.7;color:var(--ink);margin-bottom:18px;max-width:280px;}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:26px 60px;font-size:13px;max-width:1640px;margin:0 auto;border-bottom:1px solid var(--line-light);}
+  .footer-bottom-locale{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-family:var(--f-serif);}
+  .footer-bottom-locale svg{width:14px;height:14px;flex-shrink:0;}
+  .footer-bottom-legal{display:flex;gap:32px;font-family:var(--f-serif);}
+  .footer-bottom-legal a{color:var(--ink);transition:opacity .3s var(--ease);}
+  .footer-bottom-legal a:hover{opacity:.6;}
+  .footer-logo-wrap{text-align:center;padding:48px 60px 48px;}
+  .footer-logo-wrap .logo{font-family:var(--f-serif);font-size:22px;letter-spacing:.22em;font-weight:700;color:var(--ink);display:block;margin-bottom:12px;}
+  .footer-meta{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);}
+
+  /* ———— Fullscreen Menu Overlay ———— */
+  .menu-overlay{
+    position:fixed;top:0;left:0;bottom:0;
+    width:min(420px,90vw);
+    background:#fff;color:var(--ink);
+    z-index:200;
+    transform:translateX(-100%);
+    transition:transform .55s cubic-bezier(.7,0,.3,1);
+    display:flex;flex-direction:column;
+    box-shadow:0 0 0 1px rgba(0,0,0,0);
+    overflow-y:auto;
+  }
+  .menu-overlay.open{
+    transform:translateX(0);
+    box-shadow:30px 0 80px rgba(0,0,0,.12);
+  }
+  .menu-backdrop{
+    position:fixed;inset:0;background:rgba(0,0,0,0);
+    z-index:199;pointer-events:none;
+    transition:background .45s ease;
+  }
+  .menu-backdrop.open{background:rgba(0,0,0,.35);pointer-events:auto;}
+  .menu-header{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 36px;border-bottom:1px solid var(--line-light);
+  }
+  .menu-header .menu-logo{
+    font-family:var(--f-serif);font-size:14px;letter-spacing:.22em;font-weight:500;
+  }
+  .menu-close{
+    background:none;border:none;cursor:pointer;color:var(--ink);
+    width:32px;height:32px;display:flex;align-items:center;justify-content:center;
+    transition:opacity .3s var(--ease);
+  }
+  .menu-close:hover{opacity:.6;}
+  .menu-body{
+    padding:40px 36px;flex:1;
+  }
+  .menu-section{margin-bottom:36px;}
+  .menu-section-label{
+    font-family:var(--f-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--muted);font-weight:500;margin-bottom:18px;display:block;
+  }
+  .menu-link{
+    display:block;font-family:var(--f-serif);font-weight:400;
+    font-size:20px;letter-spacing:.2px;color:var(--ink);
+    padding:8px 0;cursor:pointer;background:none;border:none;width:100%;text-align:left;
+    transition:opacity .3s var(--ease),padding-left .35s var(--ease);
+  }
+  .menu-link:hover{opacity:.65;padding-left:6px;}
+  .menu-stone-grid{
+    display:grid;grid-template-columns:1fr 1fr;column-gap:24px;
+  }
+  .menu-footer{
+    border-top:1px solid var(--line-light);padding:24px 36px;
+    display:flex;flex-direction:column;gap:10px;
+    font-family:var(--f-serif);font-size:13px;
+  }
+  .menu-footer a{color:var(--ink);transition:opacity .3s var(--ease);}
+  .menu-footer a:hover{opacity:.6;}
+
+  /* ———— Modal (detail popup) ———— */
+  .modal-backdrop{position:fixed;inset:0;background:rgba(10,10,10,.7);backdrop-filter:blur(8px);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:60px 24px;overflow-y:auto;}
+  .modal-backdrop.open{display:flex;}
+  .modal{background:var(--paper);max-width:1200px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:0;animation:modal-in .45s var(--ease);position:relative;}
+  @keyframes modal-in{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+  .modal-close{position:absolute;top:20px;right:20px;z-index:2;width:42px;height:42px;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;transition:background .3s var(--ease);}
+  .modal-close:hover{background:#fff;}
+  .modal-img{aspect-ratio:1/1;background:var(--cream);}
+  .modal-img img{width:100%;height:100%;object-fit:cover;}
+  .modal-content{padding:50px 44px;}
+  .modal-content .eyebrow{margin-bottom:12px;}
+  .modal-content h3{font-family:var(--f-serif);font-weight:400;font-size:clamp(18px,2vw,24px);margin-bottom:22px;letter-spacing:.18em;text-transform:uppercase;}
+  .modal-desc{font-size:13px;line-height:1.7;color:var(--ink);opacity:.86;margin-bottom:24px;white-space:pre-line;max-height:240px;overflow-y:auto;}
+  .modal-meta{border-top:1px solid var(--line);margin-bottom:24px;}
+  .modal-meta .row{display:grid;grid-template-columns:120px 1fr;padding:14px 0;border-bottom:1px solid var(--line);font-size:12px;}
+  .modal-meta .label{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);font-weight:500;}
+  .modal-meta .value{font-family:var(--f-serif);font-weight:400;font-size:15px;}
+  .modal-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;}
+
+  @media (max-width:1024px){
+    .gems-grid{grid-template-columns:repeat(3,1fr);}
+    .about-section{grid-template-columns:1fr;gap:50px;padding:90px 30px;}
+    .about-text{justify-self:start;max-width:100%;}
+    .about-image{order:-1;}
+    .modal{grid-template-columns:1fr;}
+    .modal-content{padding:40px 30px;}
+  }
+  @media (max-width:768px){
+    .gems-grid{grid-template-columns:repeat(2,1fr);}
+    .nav-inner{grid-template-columns:auto auto;gap:14px;padding:18px 20px;}
+    .nav-center{display:none;}
+    .section{padding:80px 24px;}
+    .controls{flex-direction:column;align-items:flex-start;}
+    .trust-strip .lines{flex-direction:column;gap:12px;}
+    .trust-strip .lines .dot{display:none;}
+    .footer-main{grid-template-columns:repeat(2,1fr);gap:40px;padding:50px 24px;}
+    .footer-services{grid-template-columns:1fr;gap:40px;padding:50px 24px;}
+    .footer-bottom{flex-direction:column;gap:14px;text-align:center;padding:22px 24px;}
+    .footer-bottom-legal{flex-wrap:wrap;justify-content:center;gap:20px;}
+  }
+  @media (max-width:480px){
+    .gems-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Nav (LV style) -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <button class="nav-action" onclick="openMenu()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <span>Menu</span>
+      </button>
+      <button class="nav-action" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('search').focus(),600)" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span>Search</span>
+      </button>
+    </div>
+    <a href="#" class="logo">NEXTLEVEL GEMS</a>
+    <div class="nav-right">
+      <a href="mailto:info@nextlvlgems.com" class="nav-action">Contact Us</a>
+      <span class="lang"><b>EN</b> / CZ</span>
+    </div>
+  </div>
+</header>
+
+<!-- Hero (LV-style centered) -->
+<section class="hero">
+  <h1 class="sr-only">Nextlevel Gems — Rare, untreated gemstones with verified origin.</h1>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Fresh Arrivals</div>
+    <div class="hero-title">Transparency <em>is the key</em></div>
+    <a href="#new" class="hero-discover">
+      Discover the Collection
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="trust-strip">
+  <div class="lines">
+    <span>Verified origin</span>
+    <span class="dot">·</span>
+    <span>Untreated whenever nature allows</span>
+    <span class="dot">·</span>
+    <span>Direct from source</span>
+  </div>
+</section>
+
+<!-- New Gems (8 — 4×2 grid, LV style) -->
+<section id="new" class="section">
+  <div class="section-head">
+    <h2>Explore a Selection of the House's Treasures</h2>
+  </div>
+  <div class="gems-grid" id="new-grid"></div>
+  <div class="view-all-wrap">
+    <a class="view-all" href="#shop">Discover All Stones</a>
+  </div>
+</section>
+
+<!-- Transition image (full-bleed) -->
+<div class="transition-image" style="background-image:url('images/transition-craft.webp');"></div>
+
+<!-- All Products with filter -->
+<section id="shop" class="section">
+  <div class="section-head">
+    <h2>The Complete Collection</h2>
+    <p>53 stones — every one fully documented, untreated whenever nature allows, sourced direct from miners and master cutters.</p>
+  </div>
+  <div class="controls">
+    <div class="filters" id="filters"></div>
+    <div style="display:flex;gap:24px;align-items:center;">
+      <div class="search-box">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="text" id="search" placeholder="Search stones…" />
+      </div>
+      <span class="results-count" id="count">53 gems</span>
+    </div>
+  </div>
+  <div class="gems-grid" id="all-grid"></div>
+</section>
+
+<!-- Contact strip -->
+<section id="contact" class="contact-strip">
+  <div class="eyebrow">Get in touch</div>
+  <h2>Inquire about a stone</h2>
+  <p>Have a question, looking for something specific, or ready to purchase? Drop us a line — we reply within 24 hours.</p>
+  <div class="contact-buttons">
+    <a class="btn-dark" href="mailto:info@nextlvlgems.com?subject=Inquiry">
+      Email us
+      <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+    </a>
+    <a class="btn-outline" href="https://www.instagram.com/nextlevel_gems/" target="_blank">
+      Instagram
+      <svg width="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3h9Zm-4.5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.25-1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- Footer (LV style) -->
+<footer>
+  <!-- Top services strip -->
+  <div class="footer-services">
+    <div>
+      <div class="footer-service-eyebrow">Client Service</div>
+      <div class="footer-service-title">Personal Inquiries</div>
+      <a href="mailto:info@nextlvlgems.com" class="footer-service-link">Contact Us</a>
+    </div>
+    <div>
+      <div class="footer-service-eyebrow">Discover</div>
+      <div class="footer-service-title">The Complete Collection</div>
+      <a href="#shop" class="footer-service-link">Browse All Stones</a>
+    </div>
+    <div>
+      <div class="footer-service-eyebrow">Stay Connected</div>
+      <div class="footer-service-title">Follow on Instagram</div>
+      <a href="https://www.instagram.com/nextlevel_gems/" target="_blank" class="footer-service-link">@nextlevel_gems</a>
+    </div>
+  </div>
+
+  <!-- Bottom row: locale + legal -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-locale">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+      Czech Republic (English)
+    </div>
+    <div class="footer-bottom-legal">
+      <a href="/sitemap.xml">Sitemap</a>
+      <a href="#contact">Legal &amp; Privacy</a>
+      <a href="#contact">Cookies</a>
+    </div>
+  </div>
+
+  <!-- Centered logo + meta -->
+  <div class="footer-logo-wrap">
+    <span class="logo">NEXTLEVEL GEMS</span>
+    <div class="footer-meta">© 2026 Nextlevel Gems · Pavel Gadas · Brno, CZ · Business ID 14414171</div>
+  </div>
+</footer>
+
+<!-- Menu overlay (LV-style, fullscreen-left) -->
+<div class="menu-backdrop" id="menu-backdrop" onclick="closeMenu()"></div>
+<aside class="menu-overlay" id="menu-overlay" aria-label="Main menu">
+  <div class="menu-header">
+    <span class="menu-logo">NEXTLEVEL GEMS</span>
+    <button class="menu-close" onclick="closeMenu()" aria-label="Close menu">
+      <svg width="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="menu-body">
+    <div class="menu-section">
+      <span class="menu-section-label">Browse</span>
+      <button class="menu-link" onclick="goToShop()">All Stones</button>
+      <button class="menu-link" onclick="document.getElementById('new').scrollIntoView({behavior:'smooth'});closeMenu();">New Arrivals</button>
+    </div>
+    <div class="menu-section">
+      <span class="menu-section-label">By Stone Type</span>
+      <div class="menu-stone-grid" id="menu-stone-grid"></div>
+    </div>
+    <div class="menu-section">
+      <span class="menu-section-label">About</span>
+      <a class="menu-link" href="mailto:info@nextlvlgems.com">Contact Us</a>
+    </div>
+  </div>
+  <div class="menu-footer">
+    <a href="mailto:info@nextlvlgems.com">info@nextlvlgems.com</a>
+    <a href="https://www.instagram.com/nextlevel_gems/" target="_blank">@nextlevel_gems</a>
+    <span style="color:var(--muted);font-size:11px;letter-spacing:.04em;">Pavel Gadas · Brno · Czech Republic</span>
+  </div>
+</aside>
+
+<!-- Modal (detail popup) -->
+<div class="modal-backdrop" id="modal" onclick="if(event.target===this) closeModal()">
+  <div class="modal" id="modal-content"></div>
+</div>
+
+<!-- Inline product data -->
+<script id="products-data" type="application/json">
+[
+  {
+    "name": "Muzo emerald 0,93ct",
+    "desc": "A classic Colombian emerald from the legendary Muzo mines. Its light green hue and fine brilliance are enhanced by delicate natural inclusions — the unmistakable fingerprint of authenticity.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6291__Al5NhHsN.jpeg"
+  },
+  {
+    "name": "Sapphire 1ct",
+    "desc": "A natural violet-pink sapphire from Ilakaka, Madagascar, showing delicate internal inclusions that enhance its natural character. With fine transparency and balanced brilliance, this 1.00-carat gem captures the gentle harmony of color and light typical for Madagascar’s finest sapphire deposits.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6448_aaiVEPU1Y.jpeg"
+  },
+  {
+    "name": "Tsavorite crystal 6,62ct",
+    "desc": "A beautifully preserved tsavorite grossular crystal weighing 6.62 carats, displaying exceptional transparency and a vivid grassy-green hue. This piece is loupe-clean, allowing its natural crystal structure to show through with remarkable clarity.\n\nIts intense green coloration is caused by trace elements of chromium (Cr) and vanadium (V) — the classic chemical signature that defines high-quality tsavorite. The crystal’s sharp, well-formed faces and bright internal glow make it an outstanding specimen both for collectors and for those seeking premium rough suitable for precision cutting.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6809_UoUz9Ko6h.jpeg"
+  },
+  {
+    "name": "Sapphire 1,655ct",
+    "desc": "A vivid pink-purplish sapphire radiating rich saturation and lively brilliance. Fine natural needle inclusions create a soft inner shimmer typical of Madagascan sapphires, enhancing its warmth and character. With VS2 clarity, this oval gem embodies the perfect balance between natural beauty and precision craftsmanship.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6436_S4Vw36LX0.jpeg"
+  },
+  {
+    "name": "Chrysoberyl 0,98ct",
+    "desc": "A petite yet luminous chrysoberyl showing glowing greenish-yellow tones and good VS2 clarity.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6348_CWfKFFuYx.jpeg"
+  },
+  {
+    "name": "Tsavorite crystal 10ct",
+    "desc": "A beautifully formed tsavorite crystal showing an exceptional natural geometry and brilliant grass-green hue. This 10-carat specimen is virtually flawless — perfectly clean to the loupe with just one tiny internal crystal inclusion visible at the center. Its vivid yet light tone gives it a lively, fresh appearance rarely seen in rough tsavorite of this size. A true collector’s piece combining clarity, color, and pristine crystal form straight from the famous Merelani Hills.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6806_Btpijqr-q.jpeg"
+  },
+  {
+    "name": "Grey spinel 1,61ct",
+    "desc": "A beautifully cut grey-blue spinel from Mozambique, weighing 1.61 carats and faceted in a crisp, precision cushion design. This gem shows a refined mix of cool grey and subtle blue flashes, giving it a sophisticated, modern character that shifts with the light. Exceptionally clean and full of lively brilliance, it’s a rare example of Mozambique spinel in a balanced, neutral–blue tone — perfect for collectors or a contemporary fine-jewelry setting.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_7234_7Nqx52XUoy.jpeg"
+  },
+  {
+    "name": "Sapphire 1,2ct",
+    "desc": "A stunning precision-cut sapphire from Tunduru, Tanzania, displaying a vivid cornflower blue-violet color with exceptional brilliance. This 1.20-carat gem is loupe-clean and perfectly proportioned, showcasing the pure beauty of Tanzanian corundum. An ideal choice for a high-end jewelry piece or collector’s gem.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_7032_Xq8M1-UZyo.jpeg"
+  },
+  {
+    "name": "Aquamarine 0,7ct",
+    "desc": "Beautioful cushion cut on this gem, featuring a bright icy-blue color and remarkable clarity — a timeless gem with graceful charm.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6359_J-qlgIfoj.jpeg"
+  },
+  {
+    "name": "Sapphire 1,1ct",
+    "desc": "A delicate pink sapphire from Ilakaka, Madagascar, showing a soft purplish-pink hue with lively brilliance. Slight natural inclusions resembling tiny bubbles add charm and authenticity to this 1.10-carat gem. Expertly cut in an oval shape, it radiates light with a gentle yet captivating sparkle — a fine example of Ilakaka’s elegant sapphire palette.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6427_52Wab4v2G.jpeg"
+  },
+  {
+    "name": "Sapphire 3,02ct",
+    "desc": "A mesmerizing 3-carat pink sapphire from Ilakaka famous mining location, glowing with vivid rosy brilliance. Delicate silk inclusions and on one side one little inclusion give it a soft inner glow, enhancing the stone’s natural charm. A truly exquisite gem — elegant, vibrant, and full of life.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6431_JDqfzxYtz.jpeg"
+  },
+  {
+    "name": "Sapphire 1,5ct",
+    "desc": "A refined 1.50-carat sapphire from Ilakaka, displaying a delicate pink-lavender hue with excellent transparency. Expertly fashioned in a rectangular step cut, the gem radiates a calm brilliance and elegant pastel tone. Minor natural inclusions highlight its authenticity while preserving its exceptional clarity — a sophisticated piece from Madagascar’s most famous sapphire fields.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6439_pr3VMnmyr.jpeg"
+  },
+  {
+    "name": "Tsavorite 1,635ct",
+    "desc": "Fine Merelani tsavorite in modern barion oval cut, showing a bright grassy-green color and excellent brilliance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6324_UiI3Jn5pg.jpeg"
+  },
+  {
+    "name": "Sapphire 0,86ct",
+    "desc": "A soft lavender-pink sapphire from Ilakaka, Madagascar, weighing 0.86 carats. Cut in a refined rectangular cushion mixed cut, it reveals excellent transparency and gentle pastel brilliance. Minor natural inclusions highlight its authenticity while enhancing the gem’s depth and warmth — a delicate and elegant example of Madagascar’s fine sapphire production.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6420_3SnkBHW9g.jpeg"
+  },
+  {
+    "name": "Magenge Spinel 0,57ct",
+    "desc": "Brilliant cut in 0.57 ct, yet with a full 97 facets – this little Mahenge spark hits way above its weight.\nAt just 5 mm, it delivers that signature neon reddish-pink glow that Mahenge is famous for, with a touch of slight inclusions that prove its natural identity and charm.\nPrecision-cut. Vivid. Collectible.\nA tiny fireball from Tanzania.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_7372_-9y0Azk6O.jpeg"
+  },
+  {
+    "name": "Aquamarine 2,27ct",
+    "desc": "Gem from Madagascar, delicately light blue and precision-cut in a trilliant shape to reveal its crystal clarity and graceful brilliance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6387__5dopAK3b.jpeg"
+  },
+  {
+    "name": "Mint Tsavorite Heart 2,98ct",
+    "desc": "A flawless, mint green with slight bluish tone tsavorite from Merelani — masterfully cut into a perfect heart. This gem radiates exceptional brilliance and life, with a pure, unbroken clarity that is extremely rare. A symbol of rarity and perfection, displaying the finest electric green hue for which Merelani tsavorites are world-renowned.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6320_h-78u9mYA.jpeg"
+  },
+  {
+    "name": "Rubellite tourmaline 36,8ct",
+    "desc": "A premium rubellite tourmaline crystal from the legendary Malkhan pegmatite field in Siberia, weighing an impressive 36.8 carats (7.36 g). This specimen displays the intensely saturated red-pink coloration that has made Malkhan rubellites some of the most sought-after tourmalines worldwide.\n\nThe crystal shows excellent natural form, with bright internal reflections and transparent zones revealing its internal architecture. The vivid coloration originates from elevated concentrations of manganese (Mn³⁺) within the tourmaline structure, which is responsible for the characteristic deep pink to red hue. Subtle zoning and internal growth textures further confirm its natural pegmatitic origin.\n\nThis is a top-grade collector’s crystal — combining strong saturation, superb size, and unmistakable Malkhan character. Fine rubellite crystals of this quality and weight from Siberia have become increasingly rare, making this piece a valuable and highly aesthetic addition to any serious collection.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6840_h8Y4jpxZiq.jpeg"
+  },
+  {
+    "name": "Afghan tourmaline 3,425ct",
+    "desc": "Beautiful tourmaline showcasing a captivating green with slight bluish tone hue in a refined Square–Portuguese hybrid cut. Its precision faceting brings exceptional brilliance and depth.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6455_uFh_xdjQCU.jpeg"
+  },
+  {
+    "name": "Chrysoberyl 3,04ct",
+    "desc": "Rarity in honey hue with refined brilliance and remarkable transparency with slight silk. This VVS1 oval chrysoberyl reflects both precision craftsmanship and natural elegance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6336_4RR_mRaI-.jpeg"
+  },
+  {
+    "name": "Aquamarine 10,44ct",
+    "desc": "An extraordinary precision-cut aquamarine with a rich Santa Maria-like deep blue. From the remote Hutag-Uul-Ord deposit in Mongolia, this cushion-cut gem radiates depth, clarity, and refined elegance — a collector’s treasure.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6373_-FQx1cOzR.jpeg"
+  },
+  {
+    "name": "Sapphire 0,75ct",
+    "desc": "charming pear-cut sapphire from Ilakaka, Madagascar, glowing with vivid pink-violet tones and lively brilliance. Fine natural inclusions accentuate its authenticity while maintaining excellent transparency. This 0.75-carat gem captures the essence of Madagascar’s vibrant sapphire palette — elegant, bright, and full of life.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6409_geCGTf4xn.jpeg"
+  },
+  {
+    "name": "Spessartine 1,3ct",
+    "desc": "Sauron Eye spessartine was fun to cut. Beautiful fire inside the stone, orangy-red fire color as in the Lord of the Rings movies. Something extraordinary for the fans.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6280_SM9KKYD8Dl.jpeg"
+  },
+  {
+    "name": "Tanga garnet 1,73ct",
+    "desc": "Exceptional garnet from Tanzania, expertly cut to showcase its vivid pinkish-violet color and outstanding brilliance. A perfect example of precision craftsmanship and natural beauty.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6265_iZ_84zWgK.jpeg"
+  },
+  {
+    "name": "Mint garnet 0,62ct",
+    "desc": "Fine trilliant-cut Merelani mint garnet garnet, flawless clarity, vibrant green color accented by a delicate bluish undertone and superb brilliance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6332_CjDKz_oiY.jpeg"
+  },
+  {
+    "name": "SPINEL 1,26ct",
+    "desc": "A beautifully saturated salmon-pink spinel from Luc Yen, showcasing that unmistakable Vietnamese glow. Cut in a classic Old Mine Portuguese style, this piece delivers exceptional brilliance, depth, and perfect light return across every facet.\nA truly elegant collector-grade gemstone with a color that feels both soft and luxurious.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_7172_q0DeQFwaF.jpeg"
+  },
+  {
+    "name": "Tsavorite 1,215ct",
+    "desc": "Vivid green hue with exceptional clarity and nice oval cut. Originating from Tsavo, the source of the world’s most prized green garnets.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6299_pU8tx6srH.jpeg"
+  },
+  {
+    "name": "Paraiba tourmaline 2,36ct",
+    "desc": "An exceptional rare Paraíba Tourmaline from Mozambique, displaying an intense neon blue-green hue with captivating inner light. Faceted in a drop cut, this gem exhibits extraordinary fire and saturation — a true electric masterpiece of nature.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6462_x2tqjhuIB.jpeg"
+  },
+  {
+    "name": "Mint garnet 0,86ct",
+    "desc": "Exquisite mint garnet from Merelani, precision Portuguese cut, perfectly clean and glowing with fresh, lively brilliance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6313_5wo6AGYto.jpeg"
+  },
+  {
+    "name": "Aquamarine 1,15ct",
+    "desc": "1.15-carat aquamarine, brilliant cut, showing a soft light-blue hue and excellent clarity. Its fine faceting enhances a gentle sparkle and airy elegance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6390_zjgpeH84h.jpeg"
+  },
+  {
+    "name": "Zircon 2,75ct",
+    "desc": "Barion oval natural zircon from Tanzania with a deep wine-red color which is prette rare and clean, well-balanced faceting. This cut provides good light return and depth, giving the stone a calm, refined appearance. A solid and attractive zircon suitable for collectors or fine jewelry.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_7039_DC57x1pa6.jpeg"
+  },
+  {
+    "name": "Chrysoberyl 1,37ct",
+    "desc": "A rare vivid yellow chrysoberyl bursting with brilliance and life. Brilliant-cut to reveal exceptional sparkle and nice clarity — a rare treasure from Madagascar’s golden fields.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6339_wQMG3FW8t.jpeg"
+  },
+  {
+    "name": "Morganite 3,36ct",
+    "desc": "A radiant trilliant-cut morganite from Madagascar, displaying a delicate pastel pink hue and exceptional clarity (VVS1). Fine precision cutting enhances its brilliance and sparkle, revealing a soft yet vivid inner glow — an elegant representation of Madagascar’s finest morganite material. Peach-pink color is really fine.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6475_J7ZiY6ajk.jpeg"
+  },
+  {
+    "name": "Morganite 1,82ct",
+    "desc": "An exquisite pear-cut morganite from Madagascar showing a delicate blush-pink hue and remarkable transparency. With pretty amazing clarity and brilliance, this 1.82-carat gem radiates soft elegance and refined pastel glow — a graceful embodiment of Madagascar’s finest morganite material.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6481_A2kGuB5Z-c.jpeg"
+  },
+  {
+    "name": "Swiss-blue Topaz 21,9ct",
+    "desc": "A flawless Swiss Blue Topaz masterfully crafted in the intricate Portuguese cut. Its precision facets create a stunning play of light and depth — pure brilliance in every angle.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6365_oDbb53igP.jpeg"
+  },
+  {
+    "name": "Ludwigite Peridot 35,15ct",
+    "desc": "A remarkable collector’s gem featuring rare Ludwigite inclusions within vibrant apple-green Peridot. Expertly crafted in a Precision Oval Cut, this 35.15-carat specimen exhibits outstanding transparency, inner character, and brilliance. A unique fusion of gemological rarity and natural beauty, ideal for collectors and connoisseurs.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_7048_73Qgcc2Zh.jpeg"
+  },
+  {
+    "name": "Chrysoberyl 1,32ct",
+    "desc": "Delicate honey hue with refined brilliance and remarkable transparency. This Eyeclean oval chrysoberyl reflects both precision craftsmanship and natural elegance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6342_VGq-KKt7rZ.jpeg"
+  },
+  {
+    "name": "Sapphire 0,78ct",
+    "desc": "A vibrant lavender-pink sapphire from Ilakaka, Madagascar, displaying excellent clarity (VS1–VS2) and radiant brilliance. The delicate blend of violet and pink hues creates a captivating play of color, accentuated by a precise oval cut. A fine example of Madagascan sapphire beauty — elegant, bright, and full of life.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6443_UulcKDfUz.jpeg"
+  },
+  {
+    "name": "Morganite 1,33ct",
+    "desc": "An exquisite morganite from Madagascar featuring a modified brilliant cushion cut that enhances its lively sparkle and soft pastel glow. With near-flawless clarity and a delicate pink hue, this 1.33-carat gem radiates refined brilliance and timeless elegance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6473_Of_jVZ-Pd3.jpeg"
+  },
+  {
+    "name": "Sapphire 2,51ct",
+    "desc": "This mesmerizing natural sapphire from Nigeria displays a vivid fusion of blue, golden yellow, and green hues arranged in striking color zones. Its elegant marquise cut enhances both brilliance and the natural flow of color within the crystal. At 2.51 carats, this gemstone combines rarity, exceptional zoning, and captivating sparkle. A single tiny inclusion adds a touch of natural character without diminishing its beauty.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6736_gxPeJ0nwv.jpeg"
+  },
+  {
+    "name": "Sapphire 2,46ct",
+    "desc": "A refined violet-lavender sapphire from Ilakaka, Madagascar. Displaying exceptional transparency and subtle inner inclusions visible only under magnification (VS1–VS2). Expertly fashioned in a rectangular step cut, this 2.46-carat gem reveals calm brilliance and delicate color balance — a rare and elegant representation of Ilakaka’s finest sapphire material.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6417_qZklM1fBOG.jpeg"
+  },
+  {
+    "name": "Umba garnet 2,56ct",
+    "desc": "Fine-quality garnet from Tanzania, precision-checkerboard cut to highlight its intense hue and superior clarity. A top-grade collector’s gem with remarkable luster.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6270_eclAd9YdrP.jpeg"
+  },
+  {
+    "name": "Morganite 1,87ct",
+    "desc": "A refined 1.87-carat morganite from Madagascar, cut in an oval brilliant shape to enhance its luminous sparkle. With near-flawless clarity and a soft peach-pink hue, it radiates pure elegance and pastel warmth.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6486_0I6U2mOuoE.jpeg"
+  },
+  {
+    "name": "Umba garnet 1,8ct",
+    "desc": "Tanzanian garnet - precisely cut, vibrant pink color and top clarity.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6277_30fKcp3WB.jpeg"
+  },
+  {
+    "name": "Chrome tourmaline 1,51ct",
+    "desc": "Fine chrome tourmaline, loupe clean, exhibiting an intense vivid green color and exceptional clarity — a gem of outstanding quality and rarity.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6467_zWD7nDBET.jpeg"
+  },
+  {
+    "name": "Sapphire 1,09ct",
+    "desc": "A refined step-cut sapphire from Ilakaka displaying a delicate lavender-pink hue and excellent brilliance. With VS2 clarity and fine transparency, this gem combines elegance, purity, and the natural charm of Madagascar’s sapphire fields.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6401_auvTZeYiL.jpeg"
+  },
+  {
+    "name": "Tsavorite garnet 1,35ct",
+    "desc": "An exquisite vivid green tsavorite from the legendary Tsavo region. Its intense color and fine oval cut reveal a brilliance rivaling emeralds — pure fire from East Africa.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6296_rq5nZZoyR.jpeg"
+  },
+  {
+    "name": "Tsavorite 1,485ct",
+    "desc": "This 1.485ct Tsavorite garnet is cut in a trilliant shape with a 7.4 mm diameter. The stone is loupe clean and precisely faceted, offering good symmetry and a clean light return.\n\nThe color is a deep green, giving the gem depth and a calm, natural look. A well-balanced stone where the quality of the cut supports the character of the material.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_7441_tgtwUyDkF.jpeg"
+  },
+  {
+    "name": "Demantoid garnet 0,47ct",
+    "desc": "Precision-cut demantoid garnet with extraordinary fire and dispersion exceeding that of natural diamonds — a true marvel of optical performance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6308_fv3ZCxzmt.jpeg"
+  },
+  {
+    "name": "Aquamarine 1,02ct",
+    "desc": "Saturated aquamarine in an elegant pear cut, displaying a delicate light-blue tone with beautiful transparency and refined brilliance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6351_V6q3GMmpg.jpeg"
+  },
+  {
+    "name": "Sapphire 1,025ct",
+    "desc": "A rare purple sapphire from Ilakaka displaying a rich violet-purplish hue and delicate silky texture that softens its inner glow. Expertly cut in a rectangular cushion shape, this gem captures both depth and fire — a truly unique piece of Madagascan beauty.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6413_aqn6vlFdL.jpeg"
+  },
+  {
+    "name": "Aquamarine 0,8ct",
+    "desc": "Brilliant aquamarine, showing a soft light-blue hue and excellent clarity. Its fine faceting enhances a gentle sparkle and airy elegance.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6361_C8aWq2Dr8.jpeg"
+  },
+  {
+    "name": "Emerald 2,275ct",
+    "desc": "Fine-quality emerald showing vivid green color with delicate silk inclusions. Exceptional purity for a Type III gem — completely untreated (No Oil). A collector’s stone.",
+    "img": "https://ik.imagekit.io/lsoq5vjgc/IMG_6286_8PAbs4YYM.jpeg"
+  }
+]
+</script>
+
+<script>
+(function(){
+  const products = JSON.parse(document.getElementById('products-data').textContent);
+
+  const getCategory = name => {
+    const lc = name.toLowerCase();
+    if (lc.includes('sapphire')) return 'Sapphire';
+    if (lc.includes('emerald') || lc.includes('muzo')) return 'Emerald';
+    if (lc.includes('tsavorite')) return 'Tsavorite';
+    if (lc.includes('garnet') || lc.includes('spessartine') || lc.includes('demantoid') || lc.includes('umba') || lc.includes('tanga') || lc.includes('mint garnet')) return 'Garnet';
+    if (lc.includes('tourmaline') || lc.includes('paraiba') || lc.includes('rubellite') || lc.includes('chrome') || lc.includes('afghan')) return 'Tourmaline';
+    if (lc.includes('spinel') || lc.includes('magenge') || lc.includes('mahenge')) return 'Spinel';
+    if (lc.includes('aquamarine')) return 'Aquamarine';
+    if (lc.includes('morganite')) return 'Morganite';
+    if (lc.includes('topaz')) return 'Topaz';
+    if (lc.includes('chrysoberyl')) return 'Chrysoberyl';
+    if (lc.includes('zircon')) return 'Zircon';
+    if (lc.includes('peridot')) return 'Peridot';
+    return 'Other';
+  };
+
+  const enriched = products.map((p, i) => ({...p, idx: i, category: getCategory(p.name)}));
+
+  // Render top 8 New Gems (4×2 grid like LV)
+  const newGems = enriched.slice(0, 8);
+  document.getElementById('new-grid').innerHTML = newGems.map(p => cardHTML(p)).join('');
+
+  // Filters
+  const cats = ['All', ...Array.from(new Set(enriched.map(p => p.category))).sort()];
+  const filtersEl = document.getElementById('filters');
+  let activeCat = 'All';
+  let searchQuery = '';
+  cats.forEach(c => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn' + (c==='All' ? ' active' : '');
+    btn.textContent = c;
+    btn.dataset.cat = c;
+    btn.onclick = () => {
+      activeCat = c;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cat===c));
+      renderAll();
+    };
+    filtersEl.appendChild(btn);
+  });
+  document.getElementById('search').oninput = e => { searchQuery = e.target.value.toLowerCase(); renderAll(); };
+
+  function renderAll(){
+    const filtered = enriched.filter(p => {
+      if (activeCat !== 'All' && p.category !== activeCat) return false;
+      if (searchQuery) {
+        const blob = (p.name + ' ' + (p.desc||'')).toLowerCase();
+        if (!blob.includes(searchQuery)) return false;
+      }
+      return true;
+    });
+    const grid = document.getElementById('all-grid');
+    grid.innerHTML = filtered.length === 0
+      ? '<div class="empty-state">No stones match your filter. Try a different category or clear search.</div>'
+      : filtered.map(p => cardHTML(p)).join('');
+    document.getElementById('count').textContent = filtered.length + (filtered.length === 1 ? ' gem' : ' gems');
+    bindCards();
+  }
+
+  function cardHTML(p){
+    return `<div class="gem-card" data-idx="${p.idx}">
+      <div class="gem-img-wrap"><img src="${p.img}" alt="${p.name.replace(/"/g,'&quot;')}" loading="lazy" /></div>
+      <h3 class="gem-name">${p.name}</h3>
+      <div class="gem-tax">Tax excluded · Shipping not included</div>
+    </div>`;
+  }
+
+  function bindCards(){
+    document.querySelectorAll('.gem-card').forEach(card => {
+      card.onclick = () => openModal(parseInt(card.dataset.idx, 10));
+    });
+  }
+
+  // Menu overlay
+  window.openMenu = () => { document.getElementById('menu-overlay').classList.add('open'); document.getElementById('menu-backdrop').classList.add('open'); document.body.style.overflow='hidden'; };
+  window.closeMenu = () => { document.getElementById('menu-overlay').classList.remove('open'); document.getElementById('menu-backdrop').classList.remove('open'); document.body.style.overflow=''; };
+  window.goToShop = () => { closeMenu(); setTimeout(() => document.getElementById('shop').scrollIntoView({behavior:'smooth'}), 150); };
+  window.filterByCategory = (cat) => {
+    closeMenu();
+    setTimeout(() => {
+      const btn = Array.from(document.querySelectorAll('.filter-btn')).find(b => b.dataset.cat === cat);
+      if (btn) btn.click();
+      document.getElementById('shop').scrollIntoView({behavior:'smooth'});
+    }, 150);
+  };
+  // Render stone type links in menu (categories from products)
+  const menuCats = Array.from(new Set(enriched.map(p => p.category))).sort();
+  document.getElementById('menu-stone-grid').innerHTML = menuCats.map(c => `<button class="menu-link" onclick="filterByCategory('${c}')">${c}</button>`).join('');
+
+  // Modal
+  window.closeModal = () => { document.getElementById('modal').classList.remove('open'); document.body.style.overflow=''; };
+  function openModal(idx){
+    const p = enriched[idx];
+    if (!p) return;
+    const weightMatch = p.name.match(/(\d+(?:[,.]\d+)?)\s*ct/i);
+    const weight = weightMatch ? weightMatch[1].replace(',','.') + ' ct' : '—';
+    const desc = p.desc || '';
+    const originMatch = desc.match(/(Madagascar|Mozambique|Tanzania|Colombia|Sri Lanka|Brazil|Burma|Myanmar|Afghanistan|Russia|Ethiopia|Mongolia|Vietnam|Siberia|Nigeria|Merelani|Ilakaka|Muzo|Mahenge|Tsavo|Tunduru|Malkhan|Luc Yen)/i);
+    const origin = originMatch ? originMatch[1] : '—';
+    const subject = encodeURIComponent('Inquiry: ' + p.name);
+    const body = encodeURIComponent('Hello,\n\nI would like to inquire about ' + p.name + '.\n\nBest regards,\n');
+    document.getElementById('modal-content').innerHTML = `
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">
+        <svg width="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-img"><img src="${p.img}" alt="${p.name.replace(/"/g,'&quot;')}" /></div>
+      <div class="modal-content">
+        <div class="eyebrow">${p.category}</div>
+        <h3>${p.name}</h3>
+        <div class="modal-desc">${(p.desc || 'No description available.').replace(/</g,'&lt;')}</div>
+        <div class="modal-meta">
+          <div class="row"><span class="label">Weight</span><span class="value">${weight}</span></div>
+          <div class="row"><span class="label">Species</span><span class="value">${p.category}</span></div>
+          <div class="row"><span class="label">Origin</span><span class="value">${origin}</span></div>
+          <div class="row"><span class="label">Treatment</span><span class="value">Untreated unless noted</span></div>
+        </div>
+        <div class="modal-actions">
+          <a class="btn-dark" href="mailto:info@nextlvlgems.com?subject=${subject}&body=${body}">Inquire to purchase</a>
+          <button class="btn-outline" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    `;
+    document.getElementById('modal').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // initial render
+  bindCards();
+  renderAll();
+
+  // Nav scroll behavior (LV: transparent on top, solid white on scroll down)
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
